@@ -38,3 +38,18 @@ From an enterprise and frontend engineering perspective, landing pages serve as 
 * **Maintainable Codebase**: Isolates visual updates, button variants, and layout changes to specific component files without risking site-wide styling regressions.
 
 ---
+
+## 3. Objectives
+
+The primary objectives of this project are:
+
+* Design and develop a modern, responsive product landing page for BrewVery using Laravel 11, Tailwind CSS, and Blade Components.
+* Decompose the user interface into modular, reusable Blade Components (`navbar`, `hero`, `feature-card`, `pricing-card`, `testimonial-card`, `button`, `footer`) to eliminate code duplication and adhere to DRY principles.
+* Structure the application using a central master layout (`layouts/app.blade.php`) and dedicated page views (`pages/home.blade.php`) following Laravel frontend conventions.
+* Implement responsive web layouts across desktop (1280px), tablet (768px), and mobile (375px) viewports using Tailwind CSS Flexbox and Grid utilities.
+* Establish a consistent, high-contrast visual design system utilizing custom brand colors (roasted espresso `#0c0a09`, emerald green `#10b981`, and warm amber `#f59e0b`), geometric typography, and glassmorphic card surfaces.
+* Incorporate custom animations, fluid glowing blobs, and an illuminated ambient grid background using a dedicated stylesheet (`landing.css`).
+* Construct all mandatory landing page sections specified in the project wireframe: Navigation Bar, Hero Section, Menu Highlights, Brand Story, Product Showcase (POS dashboard & mobile view), 6-Item Features Grid, 3-Tier Pricing Section, Testimonials, Call-to-Action banner, and Footer.
+* Maintain clean Git version control practices with at least 10 meaningful commits adhering to Conventional Commits standards.
+* Author comprehensive project documentation detailing frontend architecture, utility styling, responsive breakpoints, and component design patterns.
+* Publish a professional portfolio milestone with before-and-after visual comparisons via GitHub and LinkedIn.
