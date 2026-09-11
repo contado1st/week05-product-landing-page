@@ -53,3 +53,28 @@ The primary objectives of this project are:
 * Maintain clean Git version control practices with at least 10 meaningful commits adhering to Conventional Commits standards.
 * Author comprehensive project documentation detailing frontend architecture, utility styling, responsive breakpoints, and component design patterns.
 * Publish a professional portfolio milestone with before-and-after visual comparisons via GitHub and LinkedIn.
+
+---
+
+## 4. Responsive Web Design
+
+Responsive Web Design (RWD) is an engineering practice that ensures web layouts, media assets, and typography adjust fluidly across any device screen size, viewport resolution, or hardware orientation. Developed using modern CSS specifications and Tailwind CSS utilities, the BrewVery landing page delivers a unified user experience whether viewed on an iPhone (375px), iPad (768px), or desktop monitor (1280px+).
+
+```text
++-------------------------------------------------------------------------+
+|                       RESPONSIVE VIEWPORT MATRIX                        |
++-------------------+-----------------------------------------------------+
+| Viewport Width    | Layout Adaptation & Component Behavior              |
++-------------------+-----------------------------------------------------+
+| Mobile (<640px)   | Single-column stack, full-width touch cards,        |
+|                   | hidden desktop menu, toggleable slide-down drawer   |
++-------------------+-----------------------------------------------------+
+| Tablet (≥768px)   | 2-column features grid, inline horizontal navbar,   |
+|                   | balanced padding, medium font scales                |
++-------------------+-----------------------------------------------------+
+| Desktop (≥1024px) | 12-column asymmetric hero & showcase grids,         |
+|                   | 3-column bestsellers, 3-tier pricing cards          |
++-------------------+-----------------------------------------------------+
+```
+
+---
