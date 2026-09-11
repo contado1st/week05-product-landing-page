@@ -16,6 +16,7 @@
 <body class="bg-[#0c0a09] text-stone-200 font-['Plus_Jakarta_Sans',sans-serif] antialiased selection:bg-emerald-500 selection:text-white flex flex-col min-h-screen relative overflow-x-hidden">
 
     <div class="global-background">
+        <div class="grid-glow-spotlight"></div>
         <div class="bg-grid-pattern"></div>
         <div class="shape-blob blob-1"></div>
         <div class="shape-blob blob-2"></div>

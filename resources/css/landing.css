@@ -1,20 +1,21 @@
 /* ========================================================
    BrewVery - Professional Landing Page Stylesheet
-   (Global Gradients, Ambient Grid, Fluid Blobs, & Animations)
+   (Glowing Emerald Grid, Ambient Blobs, Glassmorphism, Gradients)
    ======================================================== */
 
 :root {
     --brand-emerald: #10b981;
-    --brand-emerald-dark: #059669;
+    --brand-emerald-dark: #065f46;
+    --brand-emerald-light: #6ee7b7;
     --brand-amber: #f59e0b;
     --brand-amber-dark: #d97706;
     
     --bg-dark: #0c0a09;
-    --surface-glass: rgba(28, 25, 23, 0.65);
-    --border-glass: rgba(255, 255, 255, 0.08);
+    --surface-glass: rgba(24, 24, 27, 0.7);
+    --border-glass: rgba(16, 185, 129, 0.18);
 }
 
-/* --- Global Fixed Background (Grid & Animated Blobs) --- */
+/* --- Global Fixed Background (Vibrant Grid & Ambient Glows) --- */
 .global-background {
     position: fixed;
     inset: 0;
@@ -24,71 +25,86 @@
     pointer-events: none;
 }
 
+/* Luminous Emerald Grid */
 .bg-grid-pattern {
     position: absolute;
     inset: 0;
-    background-size: 50px 50px;
+    background-size: 46px 46px;
     background-image: 
-        linear-gradient(to right, rgba(16, 185, 129, 0.05) 1px, transparent 1px),
-        linear-gradient(to bottom, rgba(16, 185, 129, 0.05) 1px, transparent 1px);
+        linear-gradient(to right, rgba(16, 185, 129, 0.16) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(16, 185, 129, 0.16) 1px, transparent 1px);
     z-index: 1;
-    mask-image: radial-gradient(circle at center, black 60%, transparent 100%);
-    -webkit-mask-image: radial-gradient(circle at center, black 60%, transparent 100%);
+    mask-image: radial-gradient(ellipse 90% 70% at 50% 15%, black 40%, transparent 95%);
+    -webkit-mask-image: radial-gradient(ellipse 90% 70% at 50% 15%, black 40%, transparent 95%);
 }
 
+/* Overhead Radial Spotlight that illuminates the top grid */
+.grid-glow-spotlight {
+    position: absolute;
+    top: -150px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 900px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(16, 185, 129, 0.35) 0%, rgba(5, 150, 105, 0.1) 60%, transparent 80%);
+    filter: blur(80px);
+    z-index: 0;
+}
+
+/* Fluid Animated Color Blobs */
 .shape-blob {
     position: absolute;
     border-radius: 50%;
-    filter: blur(110px);
+    filter: blur(100px);
     z-index: 0;
     animation: pulse-slow 12s infinite alternate ease-in-out;
 }
 
-/* Emerald Green Blob (Tea Leaf Accent) */
+/* Emerald Green Blob (Top Left Accent) */
 .blob-1 {
-    top: -10%;
-    left: -5%;
-    width: 650px;
-    height: 650px;
-    background: radial-gradient(circle, rgba(16, 185, 129, 0.22) 0%, rgba(5, 150, 105, 0.05) 70%, transparent 100%);
-}
-
-/* Warm Amber/Caramel Blob (Roasted Coffee Accent) */
-.blob-2 {
-    top: 40%;
-    right: -10%;
+    top: -5%;
+    left: -10%;
     width: 700px;
     height: 700px;
-    background: radial-gradient(circle, rgba(245, 158, 11, 0.18) 0%, rgba(180, 83, 9, 0.04) 70%, transparent 100%);
-    animation-direction: alternate-reverse;
-    animation-duration: 16s;
+    background: radial-gradient(circle, rgba(16, 185, 129, 0.35) 0%, rgba(4, 120, 87, 0.12) 50%, transparent 75%);
 }
 
-/* Deep Coffee Warmth Blob */
+/* Warm Caramel/Amber Blob (Middle Right Accent) */
+.blob-2 {
+    top: 30%;
+    right: -10%;
+    width: 750px;
+    height: 750px;
+    background: radial-gradient(circle, rgba(245, 158, 11, 0.22) 0%, rgba(180, 83, 9, 0.08) 50%, transparent 75%);
+    animation-direction: alternate-reverse;
+    animation-duration: 15s;
+}
+
+/* Deep Emerald Tea Leaf Glow (Bottom Left Accent) */
 .blob-3 {
-    bottom: -10%;
-    left: 20%;
-    width: 600px;
-    height: 600px;
-    background: radial-gradient(circle, rgba(16, 185, 129, 0.15) 0%, transparent 80%);
+    bottom: 5%;
+    left: 10%;
+    width: 650px;
+    height: 650px;
+    background: radial-gradient(circle, rgba(16, 185, 129, 0.25) 0%, rgba(6, 78, 59, 0.1) 60%, transparent 80%);
     animation-duration: 14s;
 }
 
-/* --- Animations --- */
+/* --- Keyframe Animations --- */
 @keyframes float {
     0%, 100% { transform: translateY(0px); }
-    50% { transform: translateY(-16px); }
+    50% { transform: translateY(-14px); }
 }
 
 @keyframes pulse-slow {
-    0%, 100% { opacity: 0.6; transform: scale(1); }
-    50% { opacity: 1; transform: scale(1.12); }
+    0%, 100% { opacity: 0.65; transform: scale(1); }
+    50% { opacity: 1; transform: scale(1.1); }
 }
 
 @keyframes fadeInUp {
     from { 
         opacity: 0; 
-        transform: translateY(30px) scale(0.98); 
+        transform: translateY(28px) scale(0.98); 
     }
     to { 
         opacity: 1; 
@@ -105,22 +121,20 @@
     animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
-/* Animation Delays */
 .delay-100 { animation-delay: 100ms; }
 .delay-200 { animation-delay: 200ms; }
 .delay-300 { animation-delay: 300ms; }
-.delay-400 { animation-delay: 400ms; }
 
-/* --- Section Transition Border (Glowing Line + Frosted Badge) --- */
+/* --- Section Transition Divider --- */
 .section-transition-border {
     width: 100%;
     max-width: 900px;
-    margin: 3rem auto 4rem auto; 
+    margin: 3.5rem auto 4.5rem auto; 
     height: 2px;
     background: linear-gradient(90deg, transparent 0%, var(--brand-emerald) 50%, transparent 100%);
-    opacity: 0.8;
+    opacity: 0.85;
     position: relative;
-    box-shadow: 0 0 20px rgba(16, 185, 129, 0.6);
+    box-shadow: 0 0 25px rgba(16, 185, 129, 0.7);
 }
 
 .section-transition-border::after {
@@ -129,18 +143,18 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background: rgba(12, 10, 9, 0.9);
+    background: rgba(12, 10, 9, 0.92);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
-    padding: 0.4rem 1.4rem;
+    padding: 0.45rem 1.6rem;
     border-radius: 9999px;
-    border: 1px solid rgba(16, 185, 129, 0.4);
-    color: var(--brand-emerald);
+    border: 1px solid rgba(16, 185, 129, 0.5);
+    color: var(--brand-emerald-light);
     font-weight: 800;
     font-size: 0.75rem;
     text-transform: uppercase;
     letter-spacing: 0.15em;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
     white-space: nowrap;
 }
 
@@ -154,6 +168,6 @@
 }
 
 .glass-card:hover {
-    border-color: rgba(16, 185, 129, 0.4);
-    box-shadow: 0 20px 30px -10px rgba(16, 185, 129, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    border-color: rgba(16, 185, 129, 0.5);
+    box-shadow: 0 20px 35px -10px rgba(16, 185, 129, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.12);
 }
