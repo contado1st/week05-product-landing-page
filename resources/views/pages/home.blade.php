@@ -209,7 +209,7 @@
                 <x-button variant="primary" size="lg" href="#contact" class="w-full sm:w-auto shadow-emerald-700/40">
                     Order via Foodpanda
                 </x-button>
-                <x-button variant="secondary" size="lg" href="#contact" class="w-full sm:w-auto text-stone-900 bg-amber-400 hover:bg-amber-500">
+                <x-button variant="secondary" size="lg" href="#contact" class="w-full sm:w-auto text-stone-900 bg-amber-400 hover:bg-amber-500 border-none">
                     Order via GrabFood
                 </x-button>
             </div>

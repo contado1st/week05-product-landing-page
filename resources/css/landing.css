@@ -16,11 +16,19 @@
 }
 
 /* --- Global Fixed Background (Vibrant Grid & Ambient Glows) --- */
+
 .global-background {
     position: fixed;
     inset: 0;
     z-index: -1;
     background-color: var(--bg-dark);
+    /* NEW: Coffee Beans Background with Dark Readability Overlay */
+    background-image: 
+        linear-gradient(to bottom, rgba(12, 10, 9, 0.88), rgba(12, 10, 9, 0.96)),
+        url('../images/beans_background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     overflow: hidden;
     pointer-events: none;
 }

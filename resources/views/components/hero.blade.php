@@ -17,7 +17,7 @@
                 </h1>
 
                 <p class="text-base sm:text-lg text-stone-300 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
-                    From genuine Batangas Liberica Kapeng Barako to our creamy Milk Tea Suprema, BrewVery delivers premium handcrafted café beverages at friendly community prices across Majayjay and Mabitac[cite: 274, 277, 279, 293, 311].
+                    From genuine Batangas Liberica Kapeng Barako to our creamy Milk Tea Suprema, BrewVery delivers premium handcrafted café beverages at friendly community prices across Majayjay and Mabitac.
                 </p>
 
                 <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
@@ -34,13 +34,13 @@
 
                 <div class="pt-6 border-t border-stone-800/80 flex flex-wrap items-center justify-center lg:justify-start gap-6 text-xs font-bold text-stone-400">
                     <div class="flex items-center gap-2">
-                        <span class="text-emerald-400 text-base">✓</span> Batangas Liberica Beans [cite: 322]
+                        <span class="text-emerald-400 text-base">✓</span> Batangas Liberica Beans 
                     </div>
                     <div class="flex items-center gap-2">
                         <span class="text-emerald-400 text-base">✓</span> Fresh Pearls Daily
                     </div>
                     <div class="flex items-center gap-2">
-                        <span class="text-emerald-400 text-base">✓</span> Majayjay & Mabitac Hubs [cite: 293, 311]
+                        <span class="text-emerald-400 text-base">✓</span> Majayjay & Mabitac Hubs 
                     </div>
                 </div>
             </div>
@@ -59,12 +59,12 @@
                             <div class="flex items-center gap-3">
                                 <span class="w-3 h-3 rounded-full bg-emerald-400 animate-pulse"></span>
                                 <div>
-                                    <p class="text-xs font-bold text-white">Milk Tea Suprema & Frappes [cite: 278, 279]</p>
+                                    <p class="text-xs font-bold text-white">Milk Tea Suprema & Frappes </p>
                                     <p class="text-[11px] text-stone-400">Freshly brewed daily pearls & krema</p>
                                 </div>
                             </div>
                             <span class="text-xs font-black text-emerald-400 bg-emerald-950/90 px-2.5 py-1 rounded-full border border-emerald-700/50">
-                                ₱38 Grande [cite: 284]
+                                ₱38 Grande
                             </span>
                         </div>
                     </div>
