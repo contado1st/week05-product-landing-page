@@ -78,3 +78,138 @@ Responsive Web Design (RWD) is an engineering practice that ensures web layouts,
 ```
 
 ---
+
+## 5. Tailwind CSS
+
+Tailwind CSS serves as the primary utility-first frontend framework for the BrewVery landing page. Rather than writing traditional monolithic CSS stylesheets with arbitrary class names, the user interface is composed directly inside Laravel Blade markup using low-level, atomic utility classes.
+
+### What is Utility-First CSS?
+
+Traditional web styling relies on "semantic" CSS architectures (such as BEM), where developers invent custom class names (`.coffee-card`, `.nav-item__link`) and manage separate external stylesheets. 
+
+In contrast, **Utility-First CSS** provides single-purpose functional classes—such as `flex`, `pt-12`, `text-center`, `bg-stone-900`, and `rounded-3xl`—that can be composed directly on HTML elements. This paradigm shifts style definitions from abstract stylesheets into structured markup, treating layout, typography, borders, and animations as composable design tokens.
+
+### Advantages of Tailwind CSS
+
+* **Rapid Development Velocity**: Eliminates context-switching between Blade template files and separate CSS files; styling changes occur directly where HTML structures are written.
+* **Elimination of Dead / Unused CSS**: Tailwind's Just-In-Time (JIT) compiler scans all `.blade.php` and `.js` files via Vite, compiling only the exact classes utilized in the markup and keeping production assets lightweight.
+* **Enforced Design System Consistency**: Constrains spacing, sizing, typography, and colors to a standardized scale (e.g., `p-4`, `p-6`, `p-8` spacing; `rounded-xl`, `rounded-3xl` border radiuses), preventing visual fragmentation across different views.
+* **Scoped Safety & Zero Side-Effects**: Styling changes applied to an element or Blade component do not unintentionally alter or break layouts elsewhere on the site.
+
+---
+
+### Responsive Utility Classes
+
+Tailwind simplifies mobile responsiveness by attaching breakpoint modifiers directly to utility classes. Styles apply mobile-first by default, with higher breakpoints overriding earlier definitions as screen real estate increases:
+
+| Breakpoint Prefix | Minimum Viewport | Layout Adaptations in BrewVery |
+| :--- | :--- | :--- |
+| *(default)* | `0px` | Single-column stacks (`grid-cols-1`), full-width cards (`w-full`), compact headers. |
+| `sm:` | `640px` | Horizontal button groups (`sm:flex-row`), scaled typography (`sm:text-4xl`). |
+| `md:` | `768px` | 2-column feature layouts (`md:grid-cols-2`), 3-column bestsellers (`md:grid-cols-3`), desktop navbar (`md:flex`). |
+| `lg:` | `1024px` | 12-column Hero/Showcase matrices (`lg:grid-cols-12`), 3-tier pricing cards (`lg:grid-cols-3`). |
+
+---
+
+### Component Styling & Concrete Code Examples
+
+The project leverages Tailwind's extensive utility toolkit—including Flexbox, Grid, rounded borders, drop shadows, hover transitions, and spacing scales:
+
+#### 1. Responsive Grid & Card Hover Effects (`resources/views/pages/home.blade.php`)
+```html
+<!-- Bestsellers 3-Column Matrix with Elevation on Hover -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+    <div class="glass-card p-8 rounded-3xl text-center hover:-translate-y-2 transition-transform duration-300 border-emerald-500/40 shadow-lg shadow-emerald-950/20">
+        <div class="w-16 h-16 mx-auto bg-emerald-950 rounded-full flex items-center justify-center border border-emerald-500/50 mb-6">
+            <span class="text-2xl">🧋</span>
+        </div>
+        <h3 class="text-xl font-bold text-white mb-2">Milk Tea Suprema</h3>
+        <p class="text-sm text-stone-400">Premium brewed tea layered with rich krema and sweet boba.</p>
+    </div>
+</div>
+```
+
+#### 2. Gradient Navbar with Frosted Backdrop Blur (`resources/views/components/navbar.blade.php`)
+```HTML
+<header class="sticky top-0 z-50 bg-gradient-to-r from-emerald-950 via-[#064e3b] to-[#0c0a09] backdrop-blur-xl border-b border-emerald-500/40 shadow-lg shadow-emerald-950/60 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-20">
+            <!-- Brand Logo & Nav Container -->
+        </div>
+    </div>
+</header>
+```
+
+#### 3. Dynamic Variant Pill Button (`resources/views/components/button.blade.php`)
+```html
+@php
+    $base = 'inline-flex items-center justify-center font-semibold rounded-full transition-all duration-300 focus:outline-none';$variants = [
+        'primary'   => 'bg-emerald-600 hover:bg-emerald-500 text-white shadow-lg shadow-emerald-900/40 hover:-translate-y-0.5',
+        'secondary' => 'bg-amber-500 hover:bg-amber-400 text-stone-950 shadow-lg shadow-amber-950/30 hover:-translate-y-0.5',
+        'outline'   => 'border border-stone-700 text-stone-300 hover:border-emerald-500 hover:text-white hover:bg-stone-800/50',
+    ];
+@endphp
+```
+
+---
+
+## 6. Blade Components
+
+Laravel Blade Components allow the user interface to be decomposed into modular, reusable building blocks[cite: 3]. Each component encapsulates its internal markup, default styling, and dynamic props, allowing changes to propagate across the entire project from a single file.
+
+### What are Blade Components?
+Blade components are a feature in Laravel that allows developers to create custom HTML tags out of Blade templates[cite: 3]. Instead of writing raw HTML for repeated elements, you define the structure once in a component file and call it using an `<x-component-name>` tag.
+
+### Why Reusable Components Improve Maintainability
+Without components, rendering six feature cards or three pricing tiers requires copying and pasting identical HTML blocks multiple times. If the design needs a padding adjustment or a new border color, the developer must hunt down and update every single instance manually, risking errors and inconsistencies[cite: 3]. 
+
+By utilizing Blade components, the markup is written exactly once. Developers simply pass varying data (titles, prices, icons) into the component using attributes (props). Updating the master component file instantly updates every instance across the entire application, significantly improving maintainability[cite: 3].
+
+### Benefits of Modular UI Development
+Modular UI development offers several key benefits[cite: 3]:
+* **Single Source of Truth**: UI bugs are fixed in one file (`button.blade.php`), resolving the issue everywhere the button is used.
+* **Cleaner Page Views**: The main `home.blade.php` file remains highly readable and uncluttered. Instead of hundreds of lines of nested `<div>` tags, the structure is abstracted into clean syntax like `<x-feature-card>` and `<x-pricing-card>`.
+* **Dynamic Flexibility**: Using Blade's `@props` directive, components accept dynamic configurations. For example, a single `<x-button>` component can render as an outline, a primary filled button, or a secondary amber button simply by passing a `variant="outline"` attribute.
+
+### Component Inventory (`resources/views/components/`)
+*(Note: Screenshots of the component folder structure are available in the `screenshots/` directory[cite: 3])*
+
+| Component | File Path | Props / Attributes | Description |
+| :--- | :--- | :--- | :--- |
+| **Navbar** | `components/navbar.blade.php` | None | Sticky responsive navigation bar with mobile drawer toggle and CTAs. |
+| **Hero** | `components/hero.blade.php` | None | Visual banner with product copy, badge, stats, and floating image assets. |
+| **Button** | `components/button.blade.php` | `variant`, `size`, `href`, `type` | Dynamic element rendering `<a>` or `<button>` with customizable styles. |
+| **Feature Card** | `components/feature-card.blade.php` | `title`, `description`, `$slot` | Glassmorphic card displaying feature icon, title, and copy. |
+| **Pricing Card** | `components/pricing-card.blade.php` | `name`, `price`, `period`, `features`, `popular` | Tiered pricing box with feature checklist and favorite badge. |
+| **Testimonial Card** | `components/testimonial-card.blade.php` | `name`, `position`, `photo`, `review`, `rating` | Review card with star ratings, quote text, and customer avatar. |
+| **Footer** | `components/footer.blade.php` | None | Multi-column footer with brand bio, operating hours, branch lists, and social icons. |
+
+### Sample Code Snippet: Button Component (`components/button.blade.php`)
+```html
+@props([
+    'variant' => 'primary',
+    'size' => 'md',
+    'href' => null,
+    'type' => 'button',
+])
+
+@php
+    $base = 'inline-flex items-center justify-center font-semibold rounded-full transition-all duration-300 focus:outline-none';$variants = [
+        'primary'   => 'bg-emerald-600 hover:bg-emerald-500 text-white shadow-lg',
+        'secondary' => 'bg-amber-500 hover:bg-amber-400 text-stone-950 shadow-lg',
+        'outline'   => 'border border-stone-700 text-stone-300 hover:border-emerald-500 hover:text-white',
+    ];
+@endphp
+
+@if ($href)
+    <a href="{{ $href }}" {{ $attributes->merge(['class' => "{$base} {$variants[$variant]}"]) }}>
+        {{ $slot }}
+    </a>
+@else
+    <button type="{{ $type }}" {{ $attributes->merge(['class' => "{$base} {$variants[$variant]}"]) }}>
+        {{ $slot }}
+    </button>
+@endif
+```
+
+---
