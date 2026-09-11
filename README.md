@@ -213,3 +213,68 @@ Modular UI development offers several key benefits[cite: 3]:
 ```
 
 ---
+
+## 7. User Interface Design System
+
+The visual design system of BrewVery blends coffeehouse heritage with modern UI patterns. A well-defined design system ensures that every component feels like part of a unified brand, which significantly improves the overall user experience by reducing cognitive load and building trust.
+
+* **Color Palette**: 
+  * **Dark Roasted Espresso (`#0c0a09`)**: Serves as the core canvas background, providing a modern, high-contrast dark-mode experience.
+  * **Radiant Emerald Leaf (`#10b981`)**: The primary brand color representing fresh tea leaves, health, and vibrancy. Used for highlights, grid illumination, and primary buttons.
+  * **Warm Caramel Amber (`#f59e0b`)**: A secondary accent color evoking roasted beans and creamy krema, used specifically for high-priority calls-to-action to draw the user's eye.
+* **Typography**: Powered by **Plus Jakarta Sans**, providing geometric legibility for headings and UI badges. Consistent font scaling across breakpoints ensures text remains readable on both mobile devices and desktop monitors.
+* **Iconography**: Clean, minimalist SVG icons are rendered directly within components (such as the Features section). This ensures instant browser rendering, perfect color matching via Tailwind text utilities, and vector-perfect scaling without pixelation.
+* **Button Styles**: Buttons feature a fully rounded "pill" shape (`rounded-full`) to differentiate them from rectangular content cards. They utilize distinct variants (`primary` emerald, `secondary` amber, and `outline`) to establish a clear visual hierarchy for user actions.
+* **Card Design**: The interface relies heavily on a "Glassmorphism" aesthetic (`.glass-card`). Cards feature semi-transparent backgrounds with backdrop blurs (`backdrop-filter: blur(16px)`) and subtle emerald borders, allowing the ambient background grid and coffee bean imagery to shine through while maintaining text legibility.
+* **Layout Consistency**: Strict adherence to Tailwind's spacing scale (e.g., `gap-8`, `py-20`, `mb-16`) and grid systems creates a predictable visual rhythm. This consistency guides the user smoothly down the landing page, making the interface feel structured and professional.
+
+---
+
+## 8. Folder Structure
+
+The project strictly follows Laravel's frontend architecture conventions while incorporating the specific directory requirements for this laboratory activity:
+
+* **`resources/views/layouts/`**: Contains `app.blade.php`, which serves as the master HTML layout. It includes the `<head>` metadata, global background elements, Vite asset loaders, and yields the main content area.
+* **`resources/views/components/`**: Houses all reusable Blade UI components (e.g., `navbar.blade.php`, `hero.blade.php`, `pricing-card.blade.php`). Abstracting code here keeps the main page view clean and adheres to DRY principles.
+* **`resources/views/pages/`**: Contains `home.blade.php`. This file acts as the primary landing page assembly, extending the master layout and invoking the various Blade components to build the sections.
+* **`public/`**: The web server root directory. It stores compiled CSS/JS assets and static media assets (such as `logo.png`, `hero.jpg`, and `beans_background.jpg`) inside `public/images/`.
+* **`screenshots/`**: A dedicated directory to store visual evidence of the completed project, including responsive layouts across different viewports and individual section captures for grading.
+* **`documentation/`**: A directory utilized for storing the project's "Before and After" comparison images, illustrating the transformation from raw wireframes to the final polished UI.
+
+---
+
+## 9. Screenshots
+
+*(The following images demonstrate the responsive behavior and component integration of the BrewVery landing page)*
+
+### Responsive Viewports
+* **Desktop View**: ![Desktop View](screenshots/Desktop_Layout.png)
+* **Mobile View**: ![Mobile View](screenshots/Mobile_Layout.jpg)
+
+### Page Sections
+* **Navigation Bar**: ![Navbar](screenshots/Navigation_Bar.png)
+* **Hero Section**: ![Hero Section](screenshots/Hero_Section.png)
+* **Features Section**: ![Features Section](screenshots/Feature_Section.png)
+* **Features Section (Part 2)**: ![Features Section 2](screenshots/Feature_Section_2.png)
+* **Pricing Section**: ![Pricing Section](screenshots/Pricing_Section.png)
+* **Testimonials**: ![Testimonials](screenshots/Testimonials.png)
+* **Footer**: ![Footer](screenshots/Footers.png)
+
+### Project Infrastructure
+* **Blade Components Folder**: ![Blade Components](screenshots/Blade_Components_Folder.png)
+* **VS Code Project Structure**: ![VS Code Structure](screenshots/VS_Code_Project_Structure.png)
+* **GitHub Repository (Commits)**: ![Git History](screenshots/GitHub_Repository.png)
+
+---
+
+## 10. Before-and-After Comparison
+
+Documenting the evolution of the interface highlights the impact of component architecture and Tailwind CSS:
+
+* **Before Design (Initial Prototype)**: The initial layout relied on raw, unstyled HTML. Without Tailwind utility classes, images were unconstrained, typography lacked hierarchy, and the layout was entirely linear. It functioned strictly as a structural wireframe. 
+  * ![Before Design](documentation/Before_Design.png)
+
+* **After Design (Final Interface)**: The polished interface applies the custom glassmorphic styling, responsive CSS Grid/Flexbox layouts, and the immersive dark coffee bean background. The visual hierarchy is significantly improved, usability is enhanced on mobile devices, and the modular Blade components ensure code maintainability.
+  * ![After Design](documentation/After_Design.png)
+
+----
