@@ -272,9 +272,9 @@ The project strictly follows Laravel's frontend architecture conventions while i
 Documenting the evolution of the interface highlights the impact of component architecture and Tailwind CSS:
 
 * **Before Design (Initial Prototype)**: The initial layout relied on raw, unstyled HTML. Without Tailwind utility classes, images were unconstrained, typography lacked hierarchy, and the layout was entirely linear. It functioned strictly as a structural wireframe. 
-  * ![Before Design](documentation/Before_Design-Copy.png)
+  * ![Before Design](documentation/Before_Design.png)
 
 * **After Design (Final Interface)**: The polished interface applies the custom glassmorphic styling, responsive CSS Grid/Flexbox layouts, and the immersive dark coffee bean background. The visual hierarchy is significantly improved, usability is enhanced on mobile devices, and the modular Blade components ensure code maintainability.
-  * ![After Design](documentation/After_Design-Design.png)
+  * ![After Design](documentation/After_Design.png)
 
 ----
