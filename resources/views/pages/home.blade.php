@@ -6,7 +6,6 @@
 
     <section id="features" class="py-20 bg-stone-950/50 border-t border-stone-800/80 relative">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            
             <div class="text-center max-w-3xl mx-auto mb-16">
                 <span class="text-xs font-bold uppercase tracking-widest text-emerald-400 bg-emerald-950/60 border border-emerald-800/50 px-3 py-1 rounded-full">
                     The BrewVery Standard
@@ -20,57 +19,294 @@
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                
                 <x-feature-card 
                     title="100% Batangas Barako" 
                     description="Authentic Batangas Liberica beans brewed strong with heavy aroma and deep native chocolate undertones.">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
-                    </svg>
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" /></svg>
                 </x-feature-card>
 
                 <x-feature-card 
                     title="Milk Tea Suprema Lineup" 
                     description="Rich brewed black tea layered with silky krema, house-cooked chewy pearls, and decadent syrups.">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
-                    </svg>
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" /></svg>
                 </x-feature-card>
 
                 <x-feature-card 
                     title="Ice-Blended Frappe Treats" 
                     description="Sweet dessert treats blended smooth with Milo Krunch, Oreo & Cream, Coffee Crumble, and whipped foam.">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
-                    </svg>
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" /></svg>
                 </x-feature-card>
 
                 <x-feature-card 
                     title="Student-First Pricing" 
                     description="Quality drinks starting at ₱28 for Clasica Media (16oz) and ₱38 for Grande (22oz). Premium doesn't mean costly.">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                    </svg>
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
                 </x-feature-card>
 
                 <x-feature-card 
                     title="Always Fresh Daily Prep" 
                     description="Boba cooked every 4 hours, coffee ground on demand, and teas steeped fresh daily for optimal taste.">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                    </svg>
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
                 </x-feature-card>
 
                 <x-feature-card 
                     title="Local Laguna Roots" 
                     description="Proudly expanding across Majayjay, Mabitac, and surrounding towns to serve your friendly neighborhood hub.">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                    </svg>
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
                 </x-feature-card>
+            </div>
+        </div>
+    </section>
+
+    <section id="showcase" class="py-24 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-xs font-bold uppercase tracking-widest text-amber-400 bg-amber-950/60 border border-amber-800/50 px-3 py-1 rounded-full">
+                    Digital Ordering Experience
+                </span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-4 tracking-tight">
+                    Order Ahead, Skip the Counter Queue
+                </h2>
+                <p class="text-stone-400 mt-4 text-base">
+                    Preview our digital barista queue and mobile ordering system designed for quick takeout in Majayjay and Mabitac.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                
+                <div class="lg:col-span-8 rounded-2xl bg-stone-900/90 border border-stone-800 p-6 shadow-2xl relative overflow-hidden">
+                    <div class="flex items-center justify-between pb-4 border-b border-stone-800 mb-6">
+                        <div class="flex items-center gap-2">
+                            <span class="w-3 h-3 rounded-full bg-red-500/80"></span>
+                            <span class="w-3 h-3 rounded-full bg-yellow-500/80"></span>
+                            <span class="w-3 h-3 rounded-full bg-green-500/80"></span>
+                            <span class="ml-2 text-xs font-mono text-stone-400">brewvery-barista-live.local/dashboard</span>
+                        </div>
+                        <span class="text-xs font-bold text-emerald-400 bg-emerald-950/80 px-2.5 py-1 rounded border border-emerald-800">
+                            Live Prep Queue: 3 Orders
+                        </span>
+                    </div>
+
+                    <div class="grid grid-cols-3 gap-4 mb-6">
+                        <div class="p-4 rounded-xl bg-stone-950 border border-stone-800/80">
+                            <p class="text-xs text-stone-400">Cups Brewed Today</p>
+                            <p class="text-2xl font-extrabold text-white mt-1">428</p>
+                        </div>
+                        <div class="p-4 rounded-xl bg-stone-950 border border-stone-800/80">
+                            <p class="text-xs text-stone-400">Avg. Prep Time</p>
+                            <p class="text-2xl font-extrabold text-emerald-400 mt-1">2.4 min</p>
+                        </div>
+                        <div class="p-4 rounded-xl bg-stone-950 border border-stone-800/80">
+                            <p class="text-xs text-stone-400">Batangas Barako Beans</p>
+                            <p class="text-2xl font-extrabold text-amber-400 mt-1">94% Fresh</p>
+                        </div>
+                    </div>
+
+                    <div class="rounded-xl overflow-hidden border border-stone-800 relative group">
+                        <img src="{{ asset('images/hero.jpg') }}" alt="Drink Lineup Screenshot" class="w-full h-64 object-cover">
+                        <div class="absolute inset-0 bg-stone-950/60 backdrop-blur-xs flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                            <span class="px-4 py-2 rounded-full bg-emerald-600 text-white text-xs font-bold">Previewing Bestseller Lineup</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-4 flex justify-center">
+                    <div class="w-full max-w-[280px] rounded-[36px] border-4 border-stone-700 bg-stone-950 p-4 shadow-2xl relative">
+                        <div class="w-24 h-4 bg-stone-800 rounded-full mx-auto mb-4"></div>
+                        
+                        <div class="space-y-3 text-left">
+                            <div class="flex items-center justify-between pb-2 border-b border-stone-800">
+                                <span class="text-xs font-bold text-white">BrewVery Mobile</span>
+                                <span class="text-[10px] text-emerald-400">● Majayjay Branch</span>
+                            </div>
+                            
+                            <div class="p-3 rounded-xl bg-stone-900 border border-stone-800 flex items-center gap-3">
+                                <div class="w-9 h-9 rounded-lg bg-emerald-950 text-emerald-400 flex items-center justify-center text-xs font-bold">16oz</div>
+                                <div>
+                                    <p class="text-xs font-bold text-white">Kapeng Barako Media</p>
+                                    <p class="text-[11px] text-emerald-400 font-extrabold">₱28.00</p>
+                                </div>
+                            </div>
+
+                            <div class="p-3 rounded-xl bg-stone-900 border border-stone-800 flex items-center gap-3">
+                                <div class="w-9 h-9 rounded-lg bg-amber-950 text-amber-400 flex items-center justify-center text-xs font-bold">22oz</div>
+                                <div>
+                                    <p class="text-xs font-bold text-white">Milk Tea Suprema</p>
+                                    <p class="text-[11px] text-emerald-400 font-extrabold">₱38.00</p>
+                                </div>
+                            </div>
+
+                            <div class="pt-2">
+                                <x-button variant="primary" size="sm" href="#pricing" class="w-full text-xs py-2">
+                                    Quick Checkout
+                                </x-button>
+                            </div>
+                        </div>
+
+                        <div class="w-20 h-1 bg-stone-800 rounded-full mx-auto mt-6"></div>
+                    </div>
+                </div>
 
             </div>
+
+            <div class="mt-14 grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+                <div class="p-4 rounded-xl bg-stone-900/40 border border-stone-800">
+                    <p class="text-emerald-400 font-bold text-sm">⚡ Fast Counter Prep</p>
+                    <p class="text-xs text-stone-400 mt-1">Under 3 minutes</p>
+                </div>
+                <div class="p-4 rounded-xl bg-stone-900/40 border border-stone-800">
+                    <p class="text-emerald-400 font-bold text-sm">📱 QR Code Menus</p>
+                    <p class="text-xs text-stone-400 mt-1">Touchless ordering</p>
+                </div>
+                <div class="p-4 rounded-xl bg-stone-900/40 border border-stone-800">
+                    <p class="text-emerald-400 font-bold text-sm">🛵 Local Delivery</p>
+                    <p class="text-xs text-stone-400 mt-1">Foodpanda & Grab</p>
+                </div>
+                <div class="p-4 rounded-xl bg-stone-900/40 border border-stone-800">
+                    <p class="text-emerald-400 font-bold text-sm">⭐ 5.0 Star Rated</p>
+                    <p class="text-xs text-stone-400 mt-1">Verified Laguna reviews</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="pricing" class="py-24 bg-stone-950/60 border-t border-stone-800/80 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-xs font-bold uppercase tracking-widest text-emerald-400 bg-emerald-950/60 border border-emerald-800/50 px-3 py-1 rounded-full">
+                    Transparent Menu Pricing
+                </span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-4 tracking-tight">
+                    Affordable Sips for Every Budget
+                </h2>
+                <p class="text-stone-400 mt-4 text-base">
+                    Select your preferred size or bundle. Enjoy premium café flavor without the mall price tags.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch">
+                
+                <x-pricing-card 
+                    name="Clasica Media"
+                    price="₱28"
+                    period="/ 16 oz cup"
+                    description="Your everyday pocket-friendly morning fuel or study session companion."
+                    :features="[
+                        '100% Batangas Liberica Barako drip',
+                        'Choice of Black or Krema Caramel',
+                        'Fresh ice-drip preparation',
+                        'Standard sweetness level (100%)',
+                    ]"
+                    buttonText="Choose Clasica"
+                    buttonHref="#contact"
+                />
+
+                <x-pricing-card 
+                    name="Suprema Grande"
+                    price="₱38"
+                    period="/ 22 oz cup"
+                    description="Our signature oversized cups loaded with toppings, krema, and rich teas."
+                    :features="[
+                        'Signature Milk Tea Suprema or Ice Blend',
+                        'Slow-cooked brown sugar boba pearls included',
+                        'Custom sweetness (0%, 50%, 75%, 100%)',
+                        'Choice of Krema, Cheesecake, or Oreo walling',
+                        'Free cup carrier for takeout',
+                    ]"
+                    :popular="true"
+                    buttonText="Order Suprema Grande"
+                    buttonHref="#contact"
+                />
+
+                <x-pricing-card 
+                    name="Barkada Pack"
+                    price="₱199"
+                    period="/ 6-Cup Bundle"
+                    description="Ideal for family gatherings, study groups, office breaks, and mini celebrations."
+                    :features="[
+                        'Mix & match 6 Grande cups (22 oz)',
+                        'Includes 3 Milk Teas & 3 Ice-Blended Frappes',
+                        'Double toppings (Pearls + Egg Pudding)',
+                        'Heavy-duty insulated takeout carrier',
+                        'Priority queue barista preparation',
+                    ]"
+                    buttonText="Get Barkada Bundle"
+                    buttonHref="#contact"
+                />
+
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonials" class="py-24 border-t border-stone-800/80 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-xs font-bold uppercase tracking-widest text-emerald-400 bg-emerald-950/60 border border-emerald-800/50 px-3 py-1 rounded-full">
+                    Customer Community Love
+                </span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-4 tracking-tight">
+                    Trusted by Local Laguna Coffee Lovers
+                </h2>
+                <p class="text-stone-400 mt-4 text-base">
+                    Read what students, remote professionals, and cyclists say about their daily BrewVery experience.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <x-testimonial-card 
+                    name="Alyssa Marie Ramos" 
+                    position="LSPU College Student, Majayjay" 
+                    photo="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=200&h=200&q=80" 
+                    review="BrewVery is literally our lifesaver during finals week! The ₱28 Barako Media gives me enough caffeine to power through late-night reviews without emptying my wallet."
+                    :rating="5"
+                />
+
+                <x-testimonial-card 
+                    name="Jayson Perez" 
+                    position="Freelance Graphic Artist, Mabitac" 
+                    photo="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&h=200&q=80" 
+                    review="The Milk Tea Suprema beats many high-priced mall brands. The pearls are consistently fresh and chewy, and the barista team in Mabitac always serves with a warm smile."
+                    :rating="5"
+                />
+
+                <x-testimonial-card 
+                    name="Coach Ryan Bautista" 
+                    position="Laguna Loop Cyclist & Daily Commuter" 
+                    photo="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=200&h=200&q=80" 
+                    review="Our cycling group always stops by the Majayjay branch after steep climbs. The Milo Krunch Frappe is the ultimate recovery treat cold, sweet, and made fast."
+                    :rating="5"
+                />
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 relative overflow-hidden bg-gradient-to-b from-stone-900 to-stone-950 border-t border-stone-800">
+        <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-emerald-900/20 via-transparent to-transparent pointer-events-none"></div>
+
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black text-white tracking-tight leading-tight">
+                Ready to Experience <br>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-amber-300">
+                    Laguna's Favorite Brew?
+                </span>
+            </h2>
+            <p class="text-stone-300 mt-5 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed">
+                Visit our physical counters in Majayjay and Mabitac, join our BrewVery VIP Rewards Club for exclusive discounts, or inquire about franchise opportunities.
+            </p>
+
+            <div class="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
+                <x-button variant="primary" size="lg" href="#contact" class="w-full sm:w-auto">
+                    Join VIP Rewards (Free)
+                </x-button>
+                <x-button variant="secondary" size="lg" href="#contact" class="w-full sm:w-auto">
+                    Inquire for Franchising
+                </x-button>
+            </div>
+            
+            <p class="text-xs text-stone-500 mt-6">
+                Open Daily from 9:00 AM – 10:00 PM across all Laguna branches.
+            </p>
         </div>
     </section>
 
