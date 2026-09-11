@@ -9,11 +9,11 @@
     'buttonHref' => '#contact',
 ])
 
-<div {{ $attributes->merge(['class' => 'relative rounded-3xl p-8 flex flex-col transition-all duration-300 ' . ($popular ? 'bg-stone-900 border-2 border-emerald-500 shadow-2xl shadow-emerald-950/40 -translate-y-2' : 'bg-stone-900/60 border border-stone-800 hover:border-stone-700 hover:-translate-y-1')]) }}>
+<div {{ $attributes->merge(['class' => 'relative rounded-3xl p-8 flex flex-col transition-all duration-300 glass-card ' . ($popular ? 'border-2 border-emerald-500 shadow-2xl shadow-emerald-950/50 -translate-y-2' : 'hover:-translate-y-1')]) }}>
     
     @if ($popular)
-        <div class="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-gradient-to-r from-emerald-500 to-amber-500 text-stone-950 text-xs font-black tracking-wider uppercase shadow-md">
-            Customer Favorite
+        <div class="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-gradient-to-r from-emerald-500 to-amber-500 text-stone-950 text-xs font-black tracking-wider uppercase shadow-lg">
+            Best Value & Favorite
         </div>
     @endif
 
@@ -23,8 +23,8 @@
     </div>
 
     <div class="flex items-baseline gap-1 mb-6 pb-6 border-b border-stone-800">
-        <span class="text-4xl sm:text-5xl font-extrabold text-white tracking-tight">{{ $price }}</span>
-        <span class="text-xs text-stone-400 font-medium">{{ $period }}</span>
+        <span class="text-4xl sm:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-white via-stone-100 to-stone-300 tracking-tight">{{ $price }}</span>
+        <span class="text-xs text-emerald-400 font-bold ml-1">{{ $period }}</span>
     </div>
 
     <ul class="space-y-3.5 mb-8 flex-1 text-sm text-stone-300">

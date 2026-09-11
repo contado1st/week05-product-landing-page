@@ -3,8 +3,8 @@
     'description',
 ])
 
-<div {{ $attributes->merge(['class' => 'group relative p-7 rounded-2xl bg-stone-900/60 border border-stone-800 hover:border-emerald-500/50 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-emerald-950/20 flex flex-col']) }}>
-    <div class="w-12 h-12 rounded-xl bg-emerald-950/80 border border-emerald-500/30 text-emerald-400 flex items-center justify-center mb-5 group-hover:scale-110 group-hover:bg-emerald-600 group-hover:text-white transition-all duration-300 shadow-sm">
+<div {{ $attributes->merge(['class' => 'group relative p-7 rounded-3xl glass-card flex flex-col hover:-translate-y-2']) }}>
+    <div class="w-13 h-13 rounded-2xl bg-emerald-950/80 border border-emerald-500/30 text-emerald-400 flex items-center justify-center mb-5 group-hover:scale-110 group-hover:bg-gradient-to-br group-hover:from-emerald-500 group-hover:to-emerald-600 group-hover:text-white transition-all duration-300 shadow-md">
         {{ $slot }}
     </div>
 
